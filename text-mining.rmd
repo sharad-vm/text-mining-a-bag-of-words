@@ -1,0 +1,17 @@
+
+
+```{r,echo = TRUE}
+text <- "Text mining usually involves the process of structuring
+the input text. The overarching goal is, essentially, to turn text 
+into data for analysis, via application of natural language processing (NLP) 
+and analytical methods."
+
+# Load qdap
+library(qdap)
+
+# Find the 10 most frequent terms: term_count
+term_count <- freq_terms(text, 10)
+
+# Plot term_count
+plot(term_count)
+```
