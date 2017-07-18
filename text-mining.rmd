@@ -15,3 +15,22 @@ term_count <- freq_terms(text, 10)
 # Plot term_count
 plot(term_count)
 ```
+Text mining begins with loading some text data into R, which we'll do with the read.csv() function. By default, read.csv() treats character strings as factor levels like Male/Female. To prevent this from happening, it's very important to use the argument stringsAsFactors = FALSE.
+
+A best practice is to examine the object you read in to make sure you know which column(s) are important. The str() function provides an efficient way of doing this. You can also count the number of documents using the nrow() function on the new object. In this example, it will tell you how many coffee tweets are in the vector.
+
+If the data frame contains columns that are not text, you may want to make a new object using only the correct column of text (e.g. some_object$column_name). 
+
+```{r,echo = TRUE}
+# Import text data
+tweets <- read.csv('coffee.csv', stringsAsFactors = F)
+
+# View the structure of tweets
+str(tweets)
+
+# Print out the number of rows in tweets
+nrow(tweets)
+
+# Isolate text from tweets: coffee_tweets
+coffee_tweets <- tweets$text
+```
