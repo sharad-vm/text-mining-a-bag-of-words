@@ -34,3 +34,34 @@ nrow(tweets)
 # Isolate text from tweets: coffee_tweets
 coffee_tweets <- tweets$text
 ```
+```{r, echo = TRUE}
+# Create the object: text
+text <- "<b>She</b> woke up at       6 A.M. It\'s so early!  She was only 10% awake and began drinking coffee in front of her computer."
+
+# All lowercase
+tolower(text)
+
+# Remove punctuation
+removePunctuation(text)
+
+# Remove numbers
+removeNumbers(text)
+
+# Remove whitespace
+stripWhitespace(text)
+
+# Remove text within brackets
+bracketX(text)
+
+# Replace numbers with words
+replace_number(text)
+
+# Replace abbreviations
+replace_abbreviation(text)
+
+# Replace contractions
+replace_contraction(text)
+
+# Replace symbols with words
+replace_symbol(text)
+```
